@@ -1,0 +1,14 @@
+.container{
+    margin: 3rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+}
+
+.table{
+    width: 100%;
+    margin: 1rem;
+}
+
+#fecha{
+    width: 60%;
+}

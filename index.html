@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+    <title>Veterinaria</title>
+</head>
+
+<body>
+
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item">
+                    Home
+                </a>
+                <a class="navbar-item">
+                    Pacientes
+                </a>
+                <a class="navbar-item">
+                    Reservar Hora
+                </a>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th title="Paciente">Paciente </th>
+                    <th title="Especie">Especie</th>
+                    <th title="Dueño">Dueño</th>
+                    <th title="Contacto">Contacto</th>
+                    <th title="Consulta">Consulta</th>
+                    <th title="Hora">Hora</th>
+                    <th title="Accion">Accion</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <th title="Paciente">Paciente </th>
+                    <th title="Especie">Especie</th>
+                    <th title="Dueño">Dueño</th>
+                    <th title="Contacto">Contacto</th>
+                    <th title="Consulta">Consulta</th>
+                    <th title="Hora">Hora</th>
+                    <th title="Accion">Accion</th>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <td id="paciente"> </td>
+                    <td id="especie"> </td>
+                    <td id="duenio"> </td>
+                    <td id="contacto"> </td>
+                    <td id="consulta"> </td>
+                    <td id="hora"> </td>
+                    <td id="accion">
+                        <button class="button is-warning" onclick="modificarHora()">...</button>
+                        <button class="button is-danger is-dark" onclick="eliminarHora()">X</button>
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+
+    </div>
+    <div class="container">
+        <button class="button is-link" id="abrir-modal">Agregar Hora</button>
+        <div id="mi-modal" class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+                <header class="modal-card-head">
+                    <p class="modal-card-title">Nueva Hora</p>
+                    <button class="delete" aria-label="close"></button>
+                </header>
+                <section class="modal-card-body">
+                    <div class="field">
+                        <label class="label">Nombre Mascota</label>
+                        <div class="control">
+                            <input class="input" type="text" placeholder="Canelita">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Dueño</label>
+                        <div class="control">
+                            <input class="input is-success" type="text" placeholder="Carla Carriola" >
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-user"></i>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Contacto</label>
+                        <div class="control">
+                            <input class="input is-danger" type="text" placeholder="+56 9 3215 9877" >
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-envelope"></i>
+                            </span>
+                            <span class="icon is-small is-right">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Especie</label>
+                        <div class="control">
+                            <div class="select">
+                                <select>
+                                    <option>Perro</option>
+                                    <option>Gato</option>
+                                    <option>Hamster</option>
+                                    <option>Conejo</option>
+                                    <option>Huron</option>
+                                    <option>Tortuga</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Message</label>
+                        <div class="control">
+                            <textarea class="textarea" placeholder="Textarea"></textarea>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Fecha y Hora</label>
+                        <div class="control">
+                            <input class="input" type="date" id="fecha"></input>
+                        
+                            <div class="select">
+                                <select>
+                                    <option>10:00-10:30</option>
+                                    <option>10:30-11:00</option>
+                                    <option>11:00-11:30</option>
+                                    <option>11:30-12:00</option>
+                                    <option>12:00-12:30</option>
+                                    <option>12:30-13:00</option>
+                                    <option>13:00-13:30</option>
+                                    <option>13:30-14:00</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <footer class="modal-card-foot">
+                    <button class="button is-success">Aceptar</button>
+                    <button class="button">Cancelar</button>
+                </footer>
+            </div>
+        </div>
+
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
